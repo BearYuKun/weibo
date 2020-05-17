@@ -8,6 +8,81 @@
     }
 </style>
 {% endblock %}
+{% block loop %}
+<!--轮播图-->
+    <h2 >最热话题:</h2>
+    <div class="container col-sm-12"style="padding-bottom: 50px" >
+					<div class="carousel slide" id="slidershow" data-ride="carousel" data-interval="2000">
+						<!--计数器-->
+						<ol class="carousel-indicators">
+							<li class="active" data-target="#slidershow" data-slide-to="0"></li>
+							<li data-target="#slidershow" data-slide-to="1"></li>
+							<li data-target="#slidershow" data-slide-to="2"></li>
+                            <li data-target="#slidershow" data-slide-to="3"></li>
+                            <li data-target="#slidershow" data-slide-to="4"></li>
+                            <li data-target="#slidershow" data-slide-to="5"></li>
+                            <li data-target="#slidershow" data-slide-to="6"></li>
+						</ol>
+						<!--图片容器-->
+						<div class="carousel-inner">
+
+							<div class="item active">
+								<img src="../../static/upload/gao">
+								<!--添加对应标题和内容-->
+								<div class="carousel-caption">
+									<h4>python已经...</h4>
+								</div>
+							</div>
+                            {% for wb in wb_list %}
+                                <div class="item">
+
+								<img src="../../static/upload/gao">
+								<!--添加对应标题和内容-->
+								<div class="carousel-caption">
+									<h4>{{ wb.content}}</h4>
+								</div>
+							</div>
+                            {% endfor %}
+							<!--轮播导航-->
+							<a href="#slidershow" data-slide="prev" class="left carousel-control" role="button">
+
+							</a>
+							<a href="#slidershow" data-slide="next" class="right carousel-control" role="button">
+
+							</a>
+						</div>
+					</div>
+				</div>
+
+
+
+{% endblock %}
+
+{% block sidebar %}
+    <nav class="navbar" id="sidebar-wrapper" role="navigation">
+  <ul class="nav sidebar-nav">
+    <li class="sidebar-brand"> <a href="#"> 迷你微博 </a> </li>
+    <li> <a href="#"> <i class="fa fa-fw fa-home"> </i> 首页 </a> </li>
+    <li> <a href="#"> <i class="fa fa-fw fa-folder"> </i> 关注的微博 </a> </li>
+    <li> <a href="#"> <i class="fa fa-fw fa-file-o"> </i> 发表微博 </a> </li>
+    <li> <a href="#"> <i class="fa fa-fw fa-cog"> </i> 热门排行 </a> </li>
+    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-fw fa-plus"> </i> Dropdown <span class="caret"> </span> </a>
+      <ul class="dropdown-menu" role="menu">
+        <li class="dropdown-header"> Dropdown heading </li>
+        <li> <a href="#"> Action </a> </li>
+        <li> <a href="#"> Another action </a> </li>
+        <li> <a href="#"> Something else here </a> </li>
+        <li> <a href="#"> Separated link </a> </li>
+        <li> <a href="#"> One more separated link </a> </li>
+      </ul>
+    </li>
+    <li> <a href="#"> <i class="fa fa-fw fa-bank"> </i> Page four </a> </li>
+    <li> <a href="#"> <i class="fa fa-fw fa-dropbox"> </i> Page 5 </a> </li>
+    <li> <a href="#"> <i class="fa fa-fw fa-twitter"> </i> Last page </a> </li>
+  </ul>
+</nav>
+{% endblock %}
+
 
 {% block content %}
 

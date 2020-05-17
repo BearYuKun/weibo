@@ -4,8 +4,9 @@
         <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-
+        <script src="../static/js/bootstrap.min.js"></script>
         <style>
             body { padding-top: 50px; }
 
@@ -70,16 +71,20 @@
 
         <div class="container">
             <div class="row">
-
+                <!-- 轮播图片区域 -->
+                <div class="col-sm-8">
+                    {% block loop %}{% endblock %}
+                </div>
+             <!-- 边栏 -->
+                <div class="col-sm-4">
+                    {% block sidebar %}{% endblock %}
+                </div>
                 <!-- 内容区 -->
                 <div class="col-sm-8">
                     {% block content %}{% endblock %}
                 </div>
 
-                <!-- 边栏 -->
-                <div class="col-sm-4">
-                    {% block sidebar %}{% endblock %}
-                </div>
+
             </div>
         </div>
     </body>
