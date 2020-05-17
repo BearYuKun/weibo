@@ -7,7 +7,7 @@ from collections import OrderedDict
 
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm.exc import FlushError
-
+import json
 from comment.models import Comment
 from libs.db import db
 from user.logins import login_required
@@ -125,4 +125,22 @@ def index():
     users = dict(User.query.filter(User.id.in_(uid_list)).values('id', 'nickname'))
     return render_template('index.html', page=page, n_page=n_page, wb_list=wb_list,users=users)
 
+
+# 点赞
+@weibo_bp.route('/like/<wid>',methods=['GET','POST'])
+@login_required
+def like(wid):
+    uid = session.get('uid')
+    like = Like.query.filter_by(uid = uid,wid = wid).first()
+    if like:
+        return jsonify({"success": 200, "msg": "已经点过赞了!"})
+    like = Like()
+    like.uid = uid
+    like.wid = wid
+    weibo = Weibo.query.filter_by(id = wid).first()
+    weibo.n_like +=1
+    db.session.add(like)
+    db.session.add(weibo)
+    db.session.commit()
+    return jsonify({"success": 200,"like":weibo.n_like})
 

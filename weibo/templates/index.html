@@ -35,16 +35,16 @@
 <div class="breadcrumb text-right transparent-bg">
     <li class="active">{{ wb.created }}</li>
 
-    <li>
-        <a class="btn btn-success btn-xs" href="/weibo/like?wid={{ wb.id }}">
-            <span class="glyphicon glyphicon-heart"></span>
+    <li class="like" id="{{ wb.id }}">
+        <a class="btn btn-success btn-xs  " >
+            <span class="glyphicon glyphicon-heart "></span>
             &nbsp;
             <span class="badge">{{ wb.n_like }}</span>
         </a>
     </li>
 
     <li>
-        <a class="btn btn-primary btn-xs" href="/weibo/show?wid={{ wb.id }}">查看</a>
+        <a class="btn btn-primary btn-xs " href="/weibo/show?wid={{ wb.id }}">查看</a>
     </li>
 </div>
 
@@ -67,4 +67,30 @@
     </ul>
 </nav>
 
+   <script type=text/javascript>
+
+    $(function(){
+    $('.like').click(function(){
+         var wid= this.id
+        bt = this
+         $.ajax({
+             type: "POST",
+             url: "http://127.0.0.1:5000/weibo/like/"+wid,
+             data: {},
+             dataType: "json",
+             success: function(data){
+                        if (data.msg){
+                            alert(data.msg)
+                        }
+
+                        $('#'+wid).find('.badge').text(data.like)
+                      },
+             flase:function () {
+                 alert('请求失败')
+             }
+         });
+    });
+});
+  </script>
 {% endblock %}
+
