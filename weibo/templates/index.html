@@ -113,16 +113,12 @@
     <li class="like" id="{{ wb.id }}">
         <a class="btn btn-success btn-xs  " >
 
-            {% for like in likes %}
-                {% if like.wid == wb.id %}
+            {% for like in likes if like.wid == wb.id %}
                 <span class="glyphicon glyphicon-heart " style="color: red" id="h{{ wb.id }}"></span>
-
                 {% else %}
-                    {% if loop.last %}
-                         <span class="glyphicon glyphicon-heart " id="h{{ wb.id }}"></span>
-                    {% endif %}
-                {% endif %}
+                <span class="glyphicon glyphicon-heart " id="h{{ wb.id }}"></span>
             {% endfor %}
+
 
 
 

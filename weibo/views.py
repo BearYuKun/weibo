@@ -55,6 +55,7 @@ def show():
         all_uid = {c.uid for c in comments}  # 所有评论的作者的 ID
         cmt_users = dict(User.query.filter(User.id.in_(all_uid)).values('id', 'nickname'))
         comments = OrderedDict([[cmt.id, cmt] for cmt in comments])  # 将所有评论转成有序字典
+        likes = Like.query.all()
         return render_template('show.html', weibo=weibo, user=user, cmt_users=cmt_users, comments=comments)
 
 
@@ -171,5 +172,5 @@ def top():
     # select id, nickname from user id in ...;
     # 取出之后是一个generator  里面是一个元组 转成字典
     users = dict(User.query.filter(User.id.in_(uid_list)).values('id', 'nickname'))
-    likes = dict(Like.query_all)
+    likes = Like.query.all()
     return render_template('top50.html', page=page, n_page=n_page, wb_list=wb_list, users=users ,likes = likes)
