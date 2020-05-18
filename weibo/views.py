@@ -55,8 +55,8 @@ def show():
         all_uid = {c.uid for c in comments}  # 所有评论的作者的 ID
         cmt_users = dict(User.query.filter(User.id.in_(all_uid)).values('id', 'nickname'))
         comments = OrderedDict([[cmt.id, cmt] for cmt in comments])  # 将所有评论转成有序字典
-        likes = Like.query.all()
-        return render_template('show.html', weibo=weibo, user=user, cmt_users=cmt_users, comments=comments)
+        like = Like.query.filter_by(wid = weibo.id).first()
+        return render_template('show.html', weibo=weibo, user=user, cmt_users=cmt_users, comments=comments ,like = like)
 
 
 # 编辑微博    后端的检查不要依赖于前端  该有的检查不能少

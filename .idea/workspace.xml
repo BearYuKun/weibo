@@ -13,26 +13,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/weibo/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="182" column="11" lean-forward="true" selection-start-line="182" selection-start-column="11" selection-end-line="182" selection-end-column="11" />
+            <state relative-caret-position="-497">
+              <caret line="132" column="9" selection-start-line="132" selection-start-column="9" selection-end-line="132" selection-end-column="9" />
               <folding>
-                <element signature="n#div#1;n#!!top" />
-                <element signature="n#div#2;n#!!top" />
-                <element signature="n#nav#1;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/weibo/templates/top50.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-51">
-              <caret line="65" column="12" lean-forward="true" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="12" />
-              <folding>
-                <element signature="n#div#1;n#!!top" />
-                <element signature="n#div#2;n#!!top" />
-                <element signature="n#nav#1;n#!!top" />
+                <element signature="n#li#2;n#div#2;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -41,10 +25,22 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/weibo/templates/show.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="27" column="6" lean-forward="true" selection-start-line="27" selection-start-column="6" selection-end-line="32" />
+            <state relative-caret-position="27">
+              <caret line="122" column="6" selection-start-line="122" selection-start-column="6" selection-end-line="122" selection-end-column="6" />
               <folding>
-                <element signature="n#style#0;n#img#0;n#h3#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#!!top" />
+                <element signature="n#h3#0;n#div#0;n#!!top" />
+                <element signature="n#div#0;n#div#0;n#!!top" />
+                <element signature="n#div#1;n#!!top" />
+                <element signature="n#li#1;n#div#2;n#!!top" />
+                <element signature="n#style#0;n#span#0;n#a#0;n#li#1;n#div#2;n#!!top" expanded="true" />
+                <element signature="e#1243#1249#0#HTML" expanded="true" />
+                <element signature="n#div#3;n#!!top" />
+                <element signature="n#div#5;n#!!top" />
+                <element signature="n#a#0;n#div#0;n#div#5;n#!!top" />
+                <element signature="e#3527#4205#0#HTML" />
+                <element signature="e#3705#4114#0#HTML" />
+                <element signature="e#4147#4194#0#HTML" />
               </folding>
             </state>
           </provider>
@@ -54,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="188">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+              <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -62,15 +58,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/weibo/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            <state relative-caret-position="-194">
+              <caret line="58" column="119" selection-start-line="58" selection-start-column="119" selection-end-line="58" selection-end-column="119" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#590#1121#0" />
                 <element signature="e#2099#2848#0" />
                 <element signature="e#2919#3151#0" />
-                <element signature="e#3218#4036#0" />
                 <element signature="e#4133#4671#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-144">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -87,7 +92,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>index</find>
       <find>login</find>
       <find>session</find>
       <find>sess</find>
@@ -108,14 +112,16 @@
       <find>avatar</find>
       <find>loop</find>
       <find>wb</find>
-      <find>heart</find>
-      <find>wid</find>
       <find>user</find>
-      <find>查看</find>
       <find>cmt</find>
-      <find>Like</find>
-      <find>like</find>
       <find>show</find>
+      <find>Like</find>
+      <find>查看</find>
+      <find>.like</find>
+      <find>weibo</find>
+      <find>wid</find>
+      <find>heart</find>
+      <find>like</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -192,6 +198,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -320,12 +327,12 @@
       <workItem from="1589711765902" duration="6219000" />
       <workItem from="1589759480635" duration="6336000" />
       <workItem from="1589767081538" duration="2404000" />
-      <workItem from="1589775613482" duration="2777000" />
+      <workItem from="1589775613482" duration="6246000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80649000" />
+    <option name="totallyTimeSpent" value="84118000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -345,8 +352,8 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30481285" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3707665" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.053475935" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.53119427" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32798573" />
@@ -369,10 +376,11 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/weibo/views.py</url>
-          <line>57</line>
-          <option name="timeStamp" value="2" />
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/weibo/templates/show.html</url>
+          <line>120</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -380,7 +388,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/weibotest$main.coverage" NAME="main Coverage Results" MODIFIED="1589605959243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CD_weibo_master$manage.coverage" NAME="manage Coverage Results" MODIFIED="1589615955237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/CD_weibo_master$main.coverage" NAME="main Coverage Results" MODIFIED="1589779029444" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CD_weibo_master$main.coverage" NAME="main Coverage Results" MODIFIED="1589782446413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CD_weibo_master$views.coverage" NAME="views Coverage Results" MODIFIED="1589761069174" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/weibo" />
   </component>
   <component name="editorHistoryManager">
@@ -568,28 +576,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#44#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/weibo/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="182" column="11" lean-forward="true" selection-start-line="182" selection-start-column="11" selection-end-line="182" selection-end-column="11" />
-          <folding>
-            <element signature="n#div#1;n#!!top" />
-            <element signature="n#div#2;n#!!top" />
-            <element signature="n#nav#1;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/weibo/templates/top50.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-51">
@@ -602,33 +588,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-144">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/weibo/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        <state relative-caret-position="-194">
+          <caret line="58" column="119" selection-start-line="58" selection-start-column="119" selection-end-line="58" selection-end-column="119" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#590#1121#0" />
             <element signature="e#2099#2848#0" />
             <element signature="e#2919#3151#0" />
-            <element signature="e#3218#4036#0" />
             <element signature="e#4133#4671#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weibo/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-497">
+          <caret line="132" column="9" selection-start-line="132" selection-start-column="9" selection-end-line="132" selection-end-column="9" />
+          <folding>
+            <element signature="n#li#2;n#div#2;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/weibo/templates/show.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="27" column="6" lean-forward="true" selection-start-line="27" selection-start-column="6" selection-end-line="32" />
+        <state relative-caret-position="27">
+          <caret line="122" column="6" selection-start-line="122" selection-start-column="6" selection-end-line="122" selection-end-column="6" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#h3#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#!!top" />
+            <element signature="n#h3#0;n#div#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#!!top" />
+            <element signature="n#div#1;n#!!top" />
+            <element signature="n#li#1;n#div#2;n#!!top" />
+            <element signature="n#style#0;n#span#0;n#a#0;n#li#1;n#div#2;n#!!top" expanded="true" />
+            <element signature="e#1243#1249#0#HTML" expanded="true" />
+            <element signature="n#div#3;n#!!top" />
+            <element signature="n#div#5;n#!!top" />
+            <element signature="n#a#0;n#div#0;n#div#5;n#!!top" />
+            <element signature="e#3527#4205#0#HTML" />
+            <element signature="e#3705#4114#0#HTML" />
+            <element signature="e#4147#4194#0#HTML" />
           </folding>
         </state>
       </provider>

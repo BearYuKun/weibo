@@ -31,12 +31,18 @@
 <div class="breadcrumb text-right transparent-bg">
     <li class="active">{{ weibo.created }}</li>
 
-    <li>
-        <a class="btn btn-success btn-xs" href="/weibo/like?wid={{ weibo.id }}">
-            <span class="glyphicon glyphicon-heart"></span>
+    <li class="like" id="{{ weibo.id }}">
+
+        <a class="btn btn-success btn-xs  " >
+            {% if like %}
+                <span class="glyphicon glyphicon-heart " style="color: red" id="h{{ weibo.id }}"></span>
+                {% else %}
+                <span class="glyphicon glyphicon-heart " id="h{{weibo.id }}"></span>
+            {% endif %}
             &nbsp;
             <span class="badge">{{ weibo.n_like }}</span>
         </a>
+
     </li>
 </div>
 
@@ -104,12 +110,20 @@
     </div>
 </div>
 
+
+
+
+{% if not loop.last %}<hr>{% endif %}
+
+{% endfor %}
 <script type=text/javascript>
 
     $(function(){
     $('.like').click(function(){
+
          var wid= this.id
-        bt = this
+
+         bt = this
          $.ajax({
              type: "POST",
              url: "http://127.0.0.1:5000/weibo/like/"+wid,
@@ -133,8 +147,4 @@
     });
 });
   </script>
-{% if not loop.last %}<hr>{% endif %}
-
-{% endfor %}
-
 {% endblock %}
