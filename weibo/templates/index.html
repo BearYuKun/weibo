@@ -8,7 +8,7 @@
     }
 </style>
 {% endblock %}
-{% block loop %}
+{% block head %}
 <!--轮播图-->
     <h2 >最热话题:</h2>
     <div class="container col-sm-12"style="padding-bottom: 50px" >
@@ -112,7 +112,21 @@
 
     <li class="like" id="{{ wb.id }}">
         <a class="btn btn-success btn-xs  " >
-            <span class="glyphicon glyphicon-heart "></span>
+
+            {% for like in likes %}
+                {% if like.wid == wb.id %}
+                <span class="glyphicon glyphicon-heart " style="color: red" id="h{{ wb.id }}"></span>
+
+                {% else %}
+                    {% if loop.last %}
+                         <span class="glyphicon glyphicon-heart " id="h{{ wb.id }}"></span>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+
+
+
+
             &nbsp;
             <span class="badge">{{ wb.n_like }}</span>
         </a>
@@ -154,11 +168,15 @@
              data: {},
              dataType: "json",
              success: function(data){
-                        if (data.msg){
-                            alert(data.msg)
+                        if (data.color == 0){
+                              $('#'+wid).find('.badge').text(data.like)
+                        $('#h'+wid).css('color','white')
+                        }
+                        else {
+                            $('#'+wid).find('.badge').text(data.like)
+                        $('#h'+wid).css('color','red')
                         }
 
-                        $('#'+wid).find('.badge').text(data.like)
                       },
              flase:function () {
                  alert('请求失败')

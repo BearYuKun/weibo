@@ -123,7 +123,8 @@ def index():
     # select id, nickname from user id in ...;
     # 取出之后是一个generator  里面是一个元组 转成字典
     users = dict(User.query.filter(User.id.in_(uid_list)).values('id', 'nickname'))
-    return render_template('index.html', page=page, n_page=n_page, wb_list=wb_list,users=users)
+    likes = Like.query.all()
+    return render_template('index.html', page=page, n_page=n_page, wb_list=wb_list,users=users,likes = likes)
 
 
 # 点赞
@@ -132,15 +133,43 @@ def index():
 def like(wid):
     uid = session.get('uid')
     like = Like.query.filter_by(uid = uid,wid = wid).first()
+    weibo = Weibo.query.filter_by(id=wid).first()
+    color = 0
     if like:
-        return jsonify({"success": 200, "msg": "已经点过赞了!"})
-    like = Like()
-    like.uid = uid
-    like.wid = wid
-    weibo = Weibo.query.filter_by(id = wid).first()
-    weibo.n_like +=1
-    db.session.add(like)
+        db.session.delete(like)
+        db.session.commit()
+        weibo.n_like -= 1
+        color = 0
+    else:
+        weibo.n_like += 1
+        like = Like()
+        like.uid = uid
+        like.wid = wid
+        color = 1
+        db.session.add(like)
     db.session.add(weibo)
     db.session.commit()
-    return jsonify({"success": 200,"like":weibo.n_like})
+    return jsonify({"success": 200,"like":weibo.n_like,"color":color})
 
+# 热门排行
+@weibo_bp.route('/top50')
+def top():
+    '''显示最新的前 50 条微博'''
+    # 获取微博数据
+    # 传入页码  根据页码  给出默认值
+    page = int(request.args.get('page', 1))
+    n_per_page = 10
+    offset = (page - 1) * n_per_page
+    # 当前页要显示的微博
+    # select * from weibo order by updated desc limit 10 offset 20;
+    wb_list = Weibo.query.order_by(Weibo.n_like.desc()).limit(10).offset(offset)
+    n_weibo = Weibo.query.count()  # 微博总数
+    n_page = 5 if n_weibo >= 50 else ceil(n_weibo / n_per_page)  # 总页数
+
+    # 获取微博对应的作者
+    uid_list = {wb.uid for wb in wb_list}  # 取出微博对应的用户 ID
+    # select id, nickname from user id in ...;
+    # 取出之后是一个generator  里面是一个元组 转成字典
+    users = dict(User.query.filter(User.id.in_(uid_list)).values('id', 'nickname'))
+    likes = dict(Like.query_all)
+    return render_template('top50.html', page=page, n_page=n_page, wb_list=wb_list, users=users ,likes = likes)
