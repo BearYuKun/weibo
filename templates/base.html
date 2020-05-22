@@ -51,7 +51,6 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         {% if 'uid' in session %}
-                        {{ session.avatar }}
                         <li><img class="img-circle" src=  "{{ session.avatar }}" style="width: 50px"></li>
                         <li {% if request.path == '/user/info' %}class="active"{% endif %}>
                             <a href="/user/info">个人信息</a>
@@ -71,9 +70,9 @@
 
         <div class="container">
             <div class="row">
-                <!-- 轮播图片区域 -->
+                <!-- 首部区域 -->
                 <div class="col-sm-8">
-                    {% block loop %}{% endblock %}
+                    {% block head %}{% endblock %}
                 </div>
              <!-- 边栏 -->
                 <div class="col-sm-4">

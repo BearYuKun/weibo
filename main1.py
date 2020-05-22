@@ -30,8 +30,7 @@ db.init_app(app)
 def home():
     return redirect('/weibo/')
 
-if __name__ == '__main__':
     # 机房  同一个IP段  进行互相访问
-    app.debug = True
+app.debug = True
     #app.run(host='0.0.0.0',port=80)
-    app.run()
+app.run()
