@@ -3,7 +3,7 @@ from flask import Blueprint
 from flask import *
 from flask import redirect
 import datetime
-
+from user import logins
 from pymysql import IntegrityError
 from sqlalchemy.orm.exc import FlushError
 
@@ -111,3 +111,12 @@ def info():
 
     return render_template('login.html', error='请先登录！')
 
+@user_bp.route('/take_face')
+def take_face():
+    logins.take_face()
+    return redirect('./')
+@user_bp.route('/face_login')
+def face_login():
+    log = logins.face_recognize()
+    if log == 1:
+        return redirect('./')
