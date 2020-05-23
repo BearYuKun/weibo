@@ -124,7 +124,7 @@ def index():
     # select id, nickname from user id in ...;
     # 取出之后是一个generator  里面是一个元组 转成字典
     users = dict(User.query.filter(User.id.in_(uid_list)).values('id', 'nickname'))
-    likes = Like.query.all()
+    likes = Like.query.filter_by(uid = session.get('uid')).all()
     return render_template('index.html', page=page, n_page=n_page, wb_list=wb_list,users=users,likes = likes)
 
 
@@ -172,11 +172,12 @@ def top():
     # select id, nickname from user id in ...;
     # 取出之后是一个generator  里面是一个元组 转成字典
     users = dict(User.query.filter(User.id.in_(uid_list)).values('id', 'nickname'))
-    likes = Like.query.all()
+    likes = Like.query.filter_by(uid = session.get('uid')).all()
     return render_template('top50.html', page=page, n_page=n_page, wb_list=wb_list, users=users ,likes = likes)
 
 # 关注微博
 @weibo_bp.route('/follow_weibo')
+@login_required
 def follow_weibo():
     # 获取微博数据
     # 传入页码  根据页码  给出默认值
@@ -185,7 +186,7 @@ def follow_weibo():
     offset = (page - 1) * n_per_page
     # 当前页要显示的微博
     # select * from weibo order by updated desc limit 10 offset 20;
-    likes = Like.query.all()
+    likes = Like.query.filter_by(uid = session.get('uid')).all()
     wb_list = []
     for like in likes:
         wid = like.wid

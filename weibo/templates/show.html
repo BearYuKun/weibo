@@ -33,9 +33,7 @@
 
     <li>
         <a class="btn btn-success btn-xs" href="/weibo/like?wid={{ weibo.id }}">
-            <span class="glyphicon glyphicon-heart"></span>
-            &nbsp;
-            <span class="badge">{{ weibo.n_like }}</span>
+            关注
         </a>
     </li>
 </div>
@@ -52,7 +50,7 @@
             </div>
         </div>
 
-        <input type="hidden" name="wid" value="{{ weibo.id }}">
+        <input type="hidden" name="wid" id="wid" class="follow" value="{{ weibo.id }}">
 
         <div class="text-right">
             <button type="submit" class="btn btn-primary btn-sm">发表评论</button>
@@ -109,4 +107,34 @@
 
 {% endfor %}
 
+
+<script type=text/javascript>
+
+    $(function(){
+    $('.follow').click(function(){
+         var wid= this.id
+        bt = this
+         $.ajax({
+             type: "POST",
+             url: "http://127.0.0.1:5000/weibo/follow/"+wid,
+             data: {},
+             dataType: "json",
+             success: function(data){
+                        if (data.color == 0){
+                              $('#'+wid).find('.badge').text("关注")
+                        $('#h'+wid).css('color','white')
+                        }
+                        else {
+                            $('#'+wid).find('.badge').text("已关注")
+                        $('#'+wid).css('color','red')
+                        }
+
+                      },
+             flase:function () {
+                 alert('请求失败')
+             }
+         });
+    });
+});
+  </script>
 {% endblock %}

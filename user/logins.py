@@ -36,7 +36,6 @@ def take_face():
     uid = session['uid']
     cap = cv2.VideoCapture(0) # 打开摄像头
     face_detector = cv2.CascadeClassifier('./static/haarcascade_frontalface_alt.xml') # 识别人脸
-    isFace = False # 告诉我们是否检测出了人脸
     while True:
         flag,frame = cap.read()
         gray = cv2.cvtColor(frame, code=cv2.COLOR_BGR2GRAY)
@@ -46,22 +45,16 @@ def take_face():
                                                     minSize=(80,80),
                                                     maxSize=(320,320))
         for x,y,w,h in face_zones:
-            isFace = True
-            face = frame[y+1:y+h,x+1:x+w] # 彩色人脸
+            face = gray[y+1:y+h,x+1:x+w] # 灰色人脸
             cv2.rectangle(frame,pt1 = (x,y),pt2 = (x+w,y+h),color = [0,0,255],thickness=1)
-        if isFace:
-            cv2.imshow('face',face)# 有人脸，显示人脸
-        else:
-            cv2.imshow('face',frame) # 没有人脸，显示画面
-        key = cv2.waitKey(500)
-        isFace = False
+            cv2.imshow('press q to quit/press c to commit',frame) # 显示画面
+        key = cv2.waitKey(40)
         if key == ord('q'):
             break
-        elif key == ord('w'):# 说明采集的人脸，自己比较满意， 保存一下
+        elif key == ord('c'):# 说明采集的人脸，自己比较满意， 保存一下
             os.makedirs('../static/haarcascade_frontalface_alt.xml',exist_ok=True)
             filename = os.listdir('./static/face_certification')
             num = len(filename)
-            face = cv2.cvtColor(face,code = cv2.COLOR_BGR2GRAY) # 灰度化处理
             face = cv2.resize(face,dsize = (128,128)) # 尺寸调整
             face = cv2.equalizeHist(face) # 均衡化
             cv2.imwrite('./static/face_certification/%d.jpg'%(uid),face) # 保存图片
@@ -69,7 +62,8 @@ def take_face():
     cv2.destroyAllWindows()
     cap.release()
     return 1
-#登录识别
+
+#人脸登录识别
 def face_recognize():
     cap = cv2.VideoCapture(0)
     face_detector = cv2.CascadeClassifier('./static/haarcascade_frontalface_alt.xml')
@@ -87,7 +81,7 @@ def face_recognize():
         if flag == False:
             break
         gray = cv2.cvtColor(frame, code=cv2.COLOR_BGR2GRAY)
-        face_zones = face_detector.detectMultiScale(gray, scaleFactor=1.05,
+        face_zones = face_detector.detectMultiScale(gray, scaleFactor=1.2,
                                                     minNeighbors=5,
                                                     minSize=(80, 80),
                                                     maxSize=(320, 320))
@@ -119,6 +113,9 @@ def face_recognize():
         if log == 1:
             break
         cv2.imshow('face',frame)
+        key = cv2.waitKey(40)
+        if key == ord('q'):
+            break
     cap.release()
     cv2.destroyAllWindows()
     session['uid'] = label
