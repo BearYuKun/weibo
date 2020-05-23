@@ -124,11 +124,8 @@ def index():
     # select id, nickname from user id in ...;
     # 取出之后是一个generator  里面是一个元组 转成字典
     users = dict(User.query.filter(User.id.in_(uid_list)).values('id', 'nickname'))
-<<<<<<< HEAD
     likes = Like.query.all()
-=======
     likes = Like.query.filter_by(uid = session.get('uid')).all()
->>>>>>> face
     return render_template('index.html', page=page, n_page=n_page, wb_list=wb_list,users=users,likes = likes)
 
 
@@ -170,9 +167,6 @@ def top():
     wb_list = Weibo.query.order_by(Weibo.n_like.desc()).limit(10).offset(offset)
     n_weibo = Weibo.query.count()  # 微博总数
     n_page = 5 if n_weibo >= 50 else ceil(n_weibo / n_per_page)  # 总页数
-<<<<<<< HEAD
-=======
-
     # 获取微博对应的作者
     uid_list = {wb.uid for wb in wb_list}  # 取出微博对应的用户 ID
     # select id, nickname from user id in ...;
@@ -212,7 +206,6 @@ def follow_weibo():
     users = dict(User.query.filter(User.id.in_(uid_list)).values('id', 'nickname'))
 
     return render_template('top50.html', page=page, n_page=n_page, wb_list=wb_list, users=users, likes = likes)
->>>>>>> face
 
     # 获取微博对应的作者
     uid_list = {wb.uid for wb in wb_list}  # 取出微博对应的用户 ID
