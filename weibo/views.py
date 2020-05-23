@@ -174,3 +174,35 @@ def top():
     users = dict(User.query.filter(User.id.in_(uid_list)).values('id', 'nickname'))
     likes = Like.query.all()
     return render_template('top50.html', page=page, n_page=n_page, wb_list=wb_list, users=users ,likes = likes)
+
+# 关注微博
+@weibo_bp.route('/follow_weibo')
+def follow_weibo():
+    # 获取微博数据
+    # 传入页码  根据页码  给出默认值
+    page = int(request.args.get('page', 1))
+    n_per_page = 10
+    offset = (page - 1) * n_per_page
+    # 当前页要显示的微博
+    # select * from weibo order by updated desc limit 10 offset 20;
+    likes = Like.query.all()
+    wb_list = []
+    for like in likes:
+        wid = like.wid
+        weibo = Weibo.query.filter_by(id = wid).first()#all返回的是一个列表，first返回的是一个对象
+        if weibo:
+            wb_list.append(weibo)
+
+    n_weibo = len(wb_list) # 微博总数
+    n_page = 5 if n_weibo >= 50 else ceil(n_weibo / n_per_page)  # 总页数
+
+    # 获取微博对应的作者
+    print(wb_list[0])
+    uid_list = {wb.uid for wb in wb_list}  # 取出微博对应的用户 ID
+
+    # select id, nickname from user id in ...;
+    # 取出之后是一个generator  里面是一个元组 转成字典
+    users = dict(User.query.filter(User.id.in_(uid_list)).values('id', 'nickname'))
+
+    return render_template('top50.html', page=page, n_page=n_page, wb_list=wb_list, users=users, likes = likes)
+

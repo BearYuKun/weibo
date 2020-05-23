@@ -3,9 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="00412cfa-ea21-44a8-9d32-4b7c364e5221" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weibo/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/weibo/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face_certification/0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/face_certification/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/face_certification/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/xyk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/logins.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/logins.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weibo/templates/follow_weibo.html" beforeDir="false" afterPath="$PROJECT_DIR$/weibo/templates/follow_weibo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weibo/templates/top50.html" beforeDir="false" afterPath="$PROJECT_DIR$/weibo/templates/top50.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weibo/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/weibo/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,6 +62,28 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
+    <configuration name="logins" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="weibo（test）" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/user" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/user/logins.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="weibo（test）" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -142,28 +172,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="weibo（test）" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="until" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="weibo（test）" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -190,16 +198,16 @@
       <item itemvalue="Python.main" />
       <item itemvalue="Python.main1" />
       <item itemvalue="Python.main1 (1)" />
-      <item itemvalue="Python.manage" />
       <item itemvalue="Python.until" />
+      <item itemvalue="Python.logins" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.logins" />
         <item itemvalue="Python.main1 (1)" />
         <item itemvalue="Python.main1" />
         <item itemvalue="Python.until" />
-        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -228,7 +236,7 @@
       <workItem from="1590075770294" duration="3112000" />
       <workItem from="1590107008953" duration="2235000" />
       <workItem from="1590109640063" duration="4095000" />
-      <workItem from="1590128446732" duration="1156000" />
+      <workItem from="1590128446732" duration="21212000" />
     </task>
     <servers />
   </component>
@@ -253,61 +261,74 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="219" y="58" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1590128494492" />
+    <state x="492" y="196" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590151505847">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="492" y="196" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1590151505847" />
     <state x="433" y="99" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590077579407">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="433" y="99" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1590077579407" />
+    <state width="1330" height="582" key="DebuggerActiveHint" timestamp="1590146146454">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1330" height="582" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1590146146454" />
     <state x="496" y="108" key="FileChooserDialogImpl" timestamp="1590128480441">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="496" y="108" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1590128480441" />
-    <state width="1483" height="250" key="GridCell.Tab.0.bottom" timestamp="1590129328536">
+    <state width="1483" height="202" key="GridCell.Tab.0.bottom" timestamp="1590152158114">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="250" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590129328536" />
-    <state width="1483" height="250" key="GridCell.Tab.0.center" timestamp="1590129328536">
+    <state width="1483" height="202" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590152158114" />
+    <state width="1483" height="202" key="GridCell.Tab.0.center" timestamp="1590152158114">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="250" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590129328536" />
-    <state width="1483" height="250" key="GridCell.Tab.0.left" timestamp="1590129328536">
+    <state width="1483" height="202" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590152158114" />
+    <state width="1483" height="202" key="GridCell.Tab.0.left" timestamp="1590152158114">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="250" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590129328536" />
-    <state width="1483" height="250" key="GridCell.Tab.0.right" timestamp="1590129328536">
+    <state width="1483" height="202" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590152158114" />
+    <state width="1483" height="202" key="GridCell.Tab.0.right" timestamp="1590152158114">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="250" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590129328536" />
-    <state width="1483" height="245" key="GridCell.Tab.1.bottom" timestamp="1590128758428">
+    <state width="1483" height="202" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590152158114" />
+    <state width="1483" height="245" key="GridCell.Tab.1.bottom" timestamp="1590152158111">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="245" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590128758428" />
-    <state width="1483" height="245" key="GridCell.Tab.1.center" timestamp="1590128758428">
+    <state width="1483" height="245" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590152158111" />
+    <state width="1483" height="245" key="GridCell.Tab.1.center" timestamp="1590152158111">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="245" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1590128758428" />
-    <state width="1483" height="245" key="GridCell.Tab.1.left" timestamp="1590128758428">
+    <state width="1483" height="245" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1590152158111" />
+    <state width="1483" height="245" key="GridCell.Tab.1.left" timestamp="1590152158111">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="245" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1590128758428" />
-    <state width="1483" height="245" key="GridCell.Tab.1.right" timestamp="1590128758428">
+    <state width="1483" height="245" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1590152158111" />
+    <state width="1483" height="245" key="GridCell.Tab.1.right" timestamp="1590152158111">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="245" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590128758428" />
+    <state width="1483" height="245" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590152158111" />
     <state x="270" y="56" key="SettingsEditor" timestamp="1590044036787">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="270" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1590044036787" />
+    <state x="341" y="0" width="840" height="822" key="search.everywhere.popup" timestamp="1590145814358">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="341" y="0" width="840" height="822" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1590145814358" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CD_weibo_master$manage.coverage" NAME="manage Coverage Results" MODIFIED="1589615955237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/weibo$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1590128364154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/weibo$main1__1_.coverage" NAME="main1 (1) Coverage Results" MODIFIED="1590128422984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/weibo$logins.coverage" NAME="logins Coverage Results" MODIFIED="1590140625285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/user" />
     <SUITE FILE_PATH="coverage/CD_weibo_master$views.coverage" NAME="views Coverage Results" MODIFIED="1589701163832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/weibo" />
     <SUITE FILE_PATH="coverage/weibo$msain.coverage" NAME="main Coverage Results" MODIFIED="1590128012727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/weibo$manage.coverage" NAME="manage Coverage Results" MODIFIED="1590044822888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/weibo$until.coverage" NAME="until Coverage Results" MODIFIED="1590107191426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/libs" />
     <SUITE FILE_PATH="coverage/weibotest$main.coverage" NAME="main Coverage Results" MODIFIED="1589605959243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/weibo$main.coverage" NAME="main Coverage Results" MODIFIED="1590129607727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/weibo$main.coverage" NAME="main Coverage Results" MODIFIED="1590149706796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CD_weibo_master$main.coverage" NAME="main Coverage Results" MODIFIED="1589715402236" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

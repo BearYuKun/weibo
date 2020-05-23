@@ -1,6 +1,6 @@
 import os
 from functools import wraps
-from flask import session
+from flask import session,redirect
 from flask import render_template
 import random
 from hashlib import sha256
@@ -33,6 +33,7 @@ def login_required(view_func):
 
 #获取人脸
 def take_face():
+    uid = session['uid']
     cap = cv2.VideoCapture(0) # 打开摄像头
     face_detector = cv2.CascadeClassifier('./static/haarcascade_frontalface_alt.xml') # 识别人脸
     isFace = False # 告诉我们是否检测出了人脸
@@ -52,18 +53,18 @@ def take_face():
             cv2.imshow('face',face)# 有人脸，显示人脸
         else:
             cv2.imshow('face',frame) # 没有人脸，显示画面
-        key = cv2.waitKey(2000)
+        key = cv2.waitKey(500)
         isFace = False
         if key == ord('q'):
             break
         elif key == ord('w'):# 说明采集的人脸，自己比较满意， 保存一下
-            os.makedirs('./face_certification',exist_ok=True)
-            filename = os.listdir('./face_certification')
+            os.makedirs('../static/haarcascade_frontalface_alt.xml',exist_ok=True)
+            filename = os.listdir('./static/face_certification')
             num = len(filename)
             face = cv2.cvtColor(face,code = cv2.COLOR_BGR2GRAY) # 灰度化处理
             face = cv2.resize(face,dsize = (128,128)) # 尺寸调整
             face = cv2.equalizeHist(face) # 均衡化
-            cv2.imwrite('./face_certification/%d.jpg'%(num),face) # 保存图片
+            cv2.imwrite('./static/face_certification/%d.jpg'%(uid),face) # 保存图片
             break
     cv2.destroyAllWindows()
     cap.release()
@@ -76,7 +77,6 @@ def face_recognize():
     faces = os.listdir('./static/face_certification') # 列表
     X = np.asarray([cv2.imread('./static/face_certification/'+face)[:,:,0] for face in faces])
     y = np.asarray([int(face.split('.')[0]) for face in faces])
-    print(y)
     face_recognizer.train(X,y) # train，算法，知道哪个人脸可以登录
     count = 0
     times = 0
@@ -87,7 +87,7 @@ def face_recognize():
         if flag == False:
             break
         gray = cv2.cvtColor(frame, code=cv2.COLOR_BGR2GRAY)
-        face_zones = face_detector.detectMultiScale(gray, scaleFactor=1.2,
+        face_zones = face_detector.detectMultiScale(gray, scaleFactor=1.05,
                                                     minNeighbors=5,
                                                     minSize=(80, 80),
                                                     maxSize=(320, 320))
@@ -106,7 +106,7 @@ def face_recognize():
                 time.sleep(2)
                 count +=1
             else:  # 验证成功
-                if confidence <90:
+                if confidence <100:
                     times +=1
                     if times == 30:
                         print('+++++++++++++++++++++刷脸登陆++++++++++++++++++++++++')
@@ -119,10 +119,10 @@ def face_recognize():
         if log == 1:
             break
         cv2.imshow('face',frame)
-        key = cv2.waitKey(1000//24)
-        if key == ord('q'):
-            break
     cap.release()
     cv2.destroyAllWindows()
-    return log
+    session['uid'] = label
+    #session['avatar'] = user.avatar
+    return 1
+
 

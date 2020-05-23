@@ -1,4 +1,4 @@
-
+import os
 from flask import Blueprint
 from flask import *
 from flask import redirect
@@ -32,7 +32,6 @@ def login():
             # 记录用户登陆状态
             session['uid'] = user.id
             session['avatar'] = user.avatar
-            print(user.avatar)
             return redirect('/user/info')
         else:
             return render_template('login.html', error='密码有误，请重新输入')
@@ -119,4 +118,30 @@ def take_face():
 def face_login():
     log = logins.face_recognize()
     if log == 1:
-        return redirect('./')
+        avatar = User.query.filter_by(id = session['uid']).first().avatar
+        session['avatar'] = avatar
+        return redirect('/user/info')
+# 粉丝列表
+@user_bp.route('/fans')
+def fans():
+    '''粉丝列表'''
+    uid = session.get('uid')
+    sql ='select * from follow where uid=uid'
+    followid =db.session.execute(sql)
+    # 查看其他人的页面  检查uid
+    user_list = []
+    fod_list = {fid.fid for fid in followid}
+    for fid in fod_list:
+        user_list.append(User.query.get(fid))
+    return render_template('fans.html', fans=user_list)
+
+@user_bp.route('/face_check',methods=('GET', 'POST'))
+def face_check():
+    uid = session['uid']
+    filenames = os.listdir('./static/face_certification')
+    for name in filenames:
+        num = name.split('.',1)[0]
+        print(num)
+        if num == str(uid):
+            return jsonify({"success": 200,"check":1})
+    return jsonify({"success": 200,"check":0})
