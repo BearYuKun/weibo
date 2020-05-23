@@ -1,6 +1,9 @@
 import random
 from hashlib import sha256
-
+import numpy as np
+import os
+import cv2
+import time
 # md5处理的较短
 # md5的哈希不够安全  整体长度处理较短 容易产生碰撞  攻击  彩虹表 产生哈希碰撞
 # shasum 多一些   都是一种算法   openssl
@@ -28,3 +31,5 @@ def check_password(user_password, safe_password):
     hash_value = sha256(bin_password).hexdigest()  # 计算用户密码的哈希值
     # 只需要检测8位之后的
     return hash_value == safe_password[8:]
+
+

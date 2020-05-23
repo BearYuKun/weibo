@@ -31,6 +31,7 @@
 <div class="breadcrumb text-right transparent-bg">
     <li class="active">{{ weibo.created }}</li>
 
+<<<<<<< HEAD
     <li class="like" id="{{ weibo.id }}">
 
         <a class="btn btn-success btn-xs  " >
@@ -41,6 +42,11 @@
             {% endif %}
             &nbsp;
             <span class="badge">{{ weibo.n_like }}</span>
+=======
+    <li>
+        <a class="btn btn-success btn-xs" href="/weibo/like?wid={{ weibo.id }}">
+            关注
+>>>>>>> face
         </a>
 
     </li>
@@ -58,7 +64,7 @@
             </div>
         </div>
 
-        <input type="hidden" name="wid" value="{{ weibo.id }}">
+        <input type="hidden" name="wid" id="wid" class="follow" value="{{ weibo.id }}">
 
         <div class="text-right">
             <button type="submit" class="btn btn-primary btn-sm">发表评论</button>
@@ -116,6 +122,7 @@
 {% if not loop.last %}<hr>{% endif %}
 
 {% endfor %}
+<<<<<<< HEAD
 <script type=text/javascript>
 
     $(function(){
@@ -127,16 +134,38 @@
          $.ajax({
              type: "POST",
              url: "http://127.0.0.1:5000/weibo/like/"+wid,
+=======
+
+
+<script type=text/javascript>
+
+    $(function(){
+    $('.follow').click(function(){
+         var wid= this.id
+        bt = this
+         $.ajax({
+             type: "POST",
+             url: "http://127.0.0.1:5000/weibo/follow/"+wid,
+>>>>>>> face
              data: {},
              dataType: "json",
              success: function(data){
                         if (data.color == 0){
+<<<<<<< HEAD
                               $('#'+wid).find('.badge').text(data.like)
                         $('#h'+wid).css('color','white')
                         }
                         else {
                             $('#'+wid).find('.badge').text(data.like)
                         $('#h'+wid).css('color','red')
+=======
+                              $('#'+wid).find('.badge').text("关注")
+                        $('#h'+wid).css('color','white')
+                        }
+                        else {
+                            $('#'+wid).find('.badge').text("已关注")
+                        $('#'+wid).css('color','red')
+>>>>>>> face
                         }
 
                       },

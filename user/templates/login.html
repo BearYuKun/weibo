@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-
 <h1>欢迎登陆！</h1>
 <hr>
 
@@ -31,5 +30,12 @@
             <button type="submit" class="btn btn-primary">登陆</button>
         </div>
     </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-1 col-sm-5">
+            <input type="button" onclick="location.href='/user/face_login'" value="人脸识别登录" name="face">
+        </div>
+    </div>
+
 </form>
 {% endblock %}

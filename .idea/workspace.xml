@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00412cfa-ea21-44a8-9d32-4b7c364e5221" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="00412cfa-ea21-44a8-9d32-4b7c364e5221" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/face_certification/13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/face_certification/15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/face_certification/25.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/face_certification/27.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/cdl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/cxk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/wuyanzu" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/xyk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/logins.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/logins.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weibo/templates/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/weibo/templates/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weibo/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/weibo/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
@@ -82,14 +98,17 @@
       </file>
     </leaf>
   </component>
+=======
+>>>>>>> face
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="FindInProjectRecents">
     <findStrings>
       <find>login</find>
@@ -191,41 +210,65 @@
       </pane>
       <pane id="Scope" />
     </panes>
+=======
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1cCpcpMzn74cDDA1OZXPy4ELcNN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+>>>>>>> face
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/main1.py" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Python\weibo\static\upload" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Python\weibo\static" />
       <recent name="C:\Users\mi\PycharmProjects\weibo（test）\user\templates" />
       <recent name="C:\Users\mi\PycharmProjects\weibo（test）\weibo\templates" />
       <recent name="C:\Users\mi\PycharmProjects\weibo（test）\static" />
       <recent name="C:\Users\mi\PycharmProjects\weibo（test）" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected="Python.main">
-    <configuration name="register.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/weibo（test）/user/templates/register.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="test.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/CD_weibo-master/templates/test.html" useBuiltInWebServerPort="true">
+    <configuration name="logins" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="weibo（test）" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/user" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/user/logins.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -235,13 +278,13 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\anaconda\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -250,7 +293,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="main1 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="weibo（test）" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -263,7 +306,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -272,7 +315,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="main1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="weibo（test）" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -280,12 +323,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/weibo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/weibo/views.py" />
+      <option name="SCRIPT_NAME" value="E:\Python\weibo\main1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -294,13 +337,71 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="weibo（test）" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="E:\Python\weibo\main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="until" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="weibo（test）" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/libs" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/libs/until.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.main1" />
+      <item itemvalue="Python.main1 (1)" />
+      <item itemvalue="Python.until" />
+      <item itemvalue="Python.logins" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+<<<<<<< HEAD
         <item itemvalue="Python.views" />
         <item itemvalue="JavaScript Debug.test.html" />
         <item itemvalue="Python.manage" />
         <item itemvalue="JavaScript Debug.register.html" />
+=======
+        <item itemvalue="Python.logins" />
+        <item itemvalue="Python.main1 (1)" />
+        <item itemvalue="Python.main1" />
+        <item itemvalue="Python.until" />
+>>>>>>> face
       </list>
     </recent_temporary>
   </component>
@@ -325,6 +426,7 @@
       <workItem from="1589615641306" duration="8789000" />
       <workItem from="1589690187974" duration="12112000" />
       <workItem from="1589711765902" duration="6219000" />
+<<<<<<< HEAD
       <workItem from="1589759480635" duration="6336000" />
       <workItem from="1589767081538" duration="2404000" />
       <workItem from="1589775613482" duration="6246000" />
@@ -334,6 +436,17 @@
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="84118000" />
   </component>
+=======
+      <workItem from="1590042512783" duration="3596000" />
+      <workItem from="1590075770294" duration="3112000" />
+      <workItem from="1590107008953" duration="2235000" />
+      <workItem from="1590109640063" duration="4095000" />
+      <workItem from="1590128446732" duration="21212000" />
+      <workItem from="1590194063075" duration="16842000" />
+    </task>
+    <servers />
+  </component>
+>>>>>>> face
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -343,6 +456,7 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
+<<<<<<< HEAD
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
@@ -370,8 +484,76 @@
       <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
+=======
+>>>>>>> face
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="395" y="90" key="#Inspections" timestamp="1590042981146">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="395" y="90" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1590042981146" />
+    <state x="219" y="58" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590128494492">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="219" y="58" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1590128494492" />
+    <state x="492" y="196" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590210491107">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="492" y="196" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1590210491107" />
+    <state x="433" y="99" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590077579407">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="433" y="99" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1590077579407" />
+    <state width="1330" height="582" key="DebuggerActiveHint" timestamp="1590146146454">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1330" height="582" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1590146146454" />
+    <state x="496" y="108" key="FileChooserDialogImpl" timestamp="1590201863502">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="496" y="108" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1590201863502" />
+    <state width="1483" height="245" key="GridCell.Tab.0.bottom" timestamp="1590222557018">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1483" height="245" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590222557018" />
+    <state width="1483" height="245" key="GridCell.Tab.0.center" timestamp="1590222557018">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1483" height="245" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590222557018" />
+    <state width="1483" height="245" key="GridCell.Tab.0.left" timestamp="1590222557018">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1483" height="245" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590222557018" />
+    <state width="1483" height="245" key="GridCell.Tab.0.right" timestamp="1590222557018">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1483" height="245" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590222557018" />
+    <state width="1483" height="245" key="GridCell.Tab.1.bottom" timestamp="1590222557019">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1483" height="245" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590222557019" />
+    <state width="1483" height="245" key="GridCell.Tab.1.center" timestamp="1590222557019">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1483" height="245" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1590222557019" />
+    <state width="1483" height="245" key="GridCell.Tab.1.left" timestamp="1590222557019">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1483" height="245" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1590222557019" />
+    <state width="1483" height="245" key="GridCell.Tab.1.right" timestamp="1590222557019">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1483" height="245" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590222557019" />
+    <state x="270" y="56" key="SettingsEditor" timestamp="1590044036787">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="270" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1590044036787" />
+    <state x="341" y="0" width="840" height="822" key="search.everywhere.popup" timestamp="1590201750485">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="341" y="0" width="840" height="822" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1590201750485" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -386,8 +568,8 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/weibotest$main.coverage" NAME="main Coverage Results" MODIFIED="1589605959243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CD_weibo_master$manage.coverage" NAME="manage Coverage Results" MODIFIED="1589615955237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+<<<<<<< HEAD
     <SUITE FILE_PATH="coverage/CD_weibo_master$main.coverage" NAME="main Coverage Results" MODIFIED="1589782446413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CD_weibo_master$views.coverage" NAME="views Coverage Results" MODIFIED="1589761069174" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/weibo" />
   </component>
@@ -648,5 +830,17 @@
         </state>
       </provider>
     </entry>
+=======
+    <SUITE FILE_PATH="coverage/weibo$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1590128364154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/weibo$main1__1_.coverage" NAME="main1 (1) Coverage Results" MODIFIED="1590128422984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/weibo$logins.coverage" NAME="logins Coverage Results" MODIFIED="1590140625285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/user" />
+    <SUITE FILE_PATH="coverage/CD_weibo_master$views.coverage" NAME="views Coverage Results" MODIFIED="1589701163832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/weibo" />
+    <SUITE FILE_PATH="coverage/weibo$msain.coverage" NAME="main Coverage Results" MODIFIED="1590128012727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/weibo$manage.coverage" NAME="manage Coverage Results" MODIFIED="1590044822888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/weibo$until.coverage" NAME="until Coverage Results" MODIFIED="1590107191426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/libs" />
+    <SUITE FILE_PATH="coverage/weibotest$main.coverage" NAME="main Coverage Results" MODIFIED="1589605959243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/weibo$main.coverage" NAME="main Coverage Results" MODIFIED="1590222070849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CD_weibo_master$main.coverage" NAME="main Coverage Results" MODIFIED="1589715402236" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+>>>>>>> face
   </component>
 </project>

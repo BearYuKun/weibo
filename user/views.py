@@ -1,9 +1,9 @@
-
+import os
 from flask import Blueprint
 from flask import *
 from flask import redirect
 import datetime
-
+from user import logins
 from pymysql import IntegrityError
 from sqlalchemy.orm.exc import FlushError
 
@@ -32,7 +32,6 @@ def login():
             # 记录用户登陆状态
             session['uid'] = user.id
             session['avatar'] = user.avatar
-            print(user.avatar)
             return redirect('/user/info')
         else:
             return render_template('login.html', error='密码有误，请重新输入')
@@ -41,6 +40,7 @@ def login():
             return redirect('/user/info')
         else:
             return render_template('login.html')
+
 # 注册
 @user_bp.route('/register', methods=('GET', 'POST'))
 def register():
@@ -53,7 +53,10 @@ def register():
         city = request.form.get('city', '').strip()
         birthday = request.form.get('birthday', '').strip()
         avatar = request.files.get('avatar')
-
+        if avatar:
+            avatar_path = '/static/upload/%s' % nickname
+        else:
+            avatar_path = '/static/upload/default'
         # 创建用户
         user = User(
             nickname=nickname,
@@ -64,7 +67,7 @@ def register():
             city=city,
             birthday=birthday,
             # 处理头像地址  保存在某一个文件中   出问题再加上   手动写进来
-            avatar='/static/upload/%s' % nickname,
+            avatar=avatar_path,
             created=datetime.datetime.now()
         )
         db.session.add(user)
@@ -78,11 +81,10 @@ def register():
             return render_template('register.html', error='昵称已被占用，请换一个')
 
         save_avatar(nickname,avatar)
+        flash('注册成功！')
         return redirect('/user/login')
     else:
         return render_template('register.html')
-
-
 
 # 退出
 @user_bp.route('/logout')
@@ -90,6 +92,7 @@ def logout():
     '''退出'''
     session.pop('uid')
     return redirect('/')
+
 # 信息
 @user_bp.route('/info')
 def info():
@@ -110,4 +113,53 @@ def info():
         return render_template('info.html', user=user, followed=followed)
 
     return render_template('login.html', error='请先登录！')
+# 采集人脸
+@user_bp.route('/take_face')
+def take_face():
+    logins.take_face()
+    uid = session.get('uid')
+    user = User.query.get(uid)
+    return render_template('info.html', user=user)
+#人脸登录
+@user_bp.route('/face_login')
+def face_login():
+    log = logins.face_recognize()
+    if log == 1:
+        avatar = User.query.filter_by(id=session['uid']).first().avatar
+        session['avatar'] = avatar
+        return redirect('/user/info')
+# 粉丝列表
+@user_bp.route('/fans')
+def fans():
+    '''粉丝列表'''
+    uid = session.get('uid')
+    sql ='select * from follow where uid=uid'
+    followid =db.session.execute(sql)
+    # 查看其他人的页面  检查uid
+    user_list = []
+    fod_list = {fid.fid for fid in followid}
+    for fid in fod_list:
+        user_list.append(User.query.get(fid))
+    return render_template('fans.html', fans=user_list)
 
+@user_bp.route('/face_check',methods=('GET', 'POST'))
+def face_check():
+    uid = session['uid']
+    filenames = os.listdir('./static/face_certification')
+    for name in filenames:
+        num = name.split('.',1)[0]
+        print(num)
+        if num == str(uid):
+            return jsonify({"success": 200,"check":1})
+    return jsonify({"success": 200,"check":0})
+
+@user_bp.route('/change_avatar')
+def change_avatar():
+    uid = session.avatar
+    user = User.query.filter_by(uid=uid)
+    avatar = request.files.get('avatar')
+    if avatar:
+        avatar_path = '/static/upload/%s' % user.nickname
+    else:
+        avatar_path = '/static/upload/default'
+    logins.save_avatar(user.nickname, avatar)

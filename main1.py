@@ -17,7 +17,7 @@ app.register_blueprint(weibo_bp,url_prefix='/weibo')
 app.register_blueprint(comment_bp, url_prefix='/comment')
 
 # 初始化数据库的设置
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456@localhost/weibo_test'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:root@localhost/weibo_test'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 
 
@@ -30,8 +30,7 @@ db.init_app(app)
 def home():
     return redirect('/weibo/')
 
-if __name__ == '__main__':
     # 机房  同一个IP段  进行互相访问
-    app.debug = True
+app.debug = True
     #app.run(host='0.0.0.0',port=80)
-    app.run()
+app.run()

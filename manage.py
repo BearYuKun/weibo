@@ -6,7 +6,7 @@ from flask_migrate import MigrateCommand,Migrate
 import random
 
 from libs.until import gen_password
-from main import app
+from main1 import app
 from libs.db import db
 # 避免循环引用
 from user.models import User

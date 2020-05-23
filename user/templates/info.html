@@ -39,7 +39,37 @@
         <li class="list-group-item item">城市：{{ user.city }}</li>
         <li class="list-group-item item">简介：{{ user.bio or "这家伙很懒，什么都没留下" }}</li>
         <li class="list-group-item item">创建日期：{{ user.created }}</li>
+    {% if user.id == session.uid %}
+        <li class="list-group-item item">面部认证：
+            <input id="unchecked" type="button" onclick="location.href='/user/take_face'" value="点击开始采集" name="face">
+            <label id="checked" style="color: green;" >已认证</label>
+        </li>
+    {% endif %}
     </ul>
 </div>
+<script>
+$(document).ready(function(){
+         $.ajax({
+             type: "POST",
+             url: "http://127.0.0.1:5000/user/face_check",
+             data: {},
+             dataType: "json",
+             success: function(data){
+                 check = data.check
+                        if (check == 0){
+                              $('#unchecked').css('display','inline')
+                              $('#checked').css('display','none')
+                        }
+                        else {
+                            $('#checked').css('display','inline')
+                            $('#unchecked').css('display','none')
+                        }
 
+                      },
+             flase:function () {
+                 alert('请求失败')
+             }
+         });
+  });
+</script>
 {% endblock %}

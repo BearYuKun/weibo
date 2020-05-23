@@ -9,6 +9,7 @@
 </style>
 {% endblock %}
 
+
 {% block content %}
 
 <!-- 显示当前页的微博 -->
@@ -20,6 +21,13 @@
                 <strong>{{ users[wb.uid] }}</strong>
             </a>：
         </div>
+
+        {% if 'uid' in session and session['uid'] == wb.uid %}
+        <div class="col-sm-2 text-right">
+            <a href="/weibo/edit?wid={{ wb.id }}">编辑</a>
+            <a href="/weibo/delete?wid={{ wb.id }}">删除</a>
+        </div>
+        {% endif %}
     </div>
     <br>
     <span>{{ wb.content | replace('\n', '<br>') | safe }}</span>
@@ -28,16 +36,26 @@
 <div class="breadcrumb text-right transparent-bg">
     <li class="active">{{ wb.created }}</li>
 
-    <li>
-        <a class="btn btn-success btn-xs" href="/weibo/like?wid={{ wb.id }}">
-            <span class="glyphicon glyphicon-heart"></span>
+    <li class="like" id="{{ wb.id }}">
+        <a class="btn btn-success btn-xs  " >
+
+            {% for like in likes if like.wid == wb.id %}
+                <span class="glyphicon glyphicon-heart " style="color: red" id="h{{ wb.id }}"></span>
+                {% else %}
+                <span class="glyphicon glyphicon-heart " id="h{{ wb.id }}"></span>
+            {% endfor %}
+
+
+
+
+
             &nbsp;
             <span class="badge">{{ wb.n_like }}</span>
         </a>
     </li>
 
     <li>
-        <a class="btn btn-primary btn-xs" href="/weibo/show?wid={{ wb.id }}">查看</a>
+        <a class="btn btn-primary btn-xs " href="/weibo/show?wid={{ wb.id }}">查看</a>
     </li>
 </div>
 
@@ -54,10 +72,40 @@
             {% if loop.index == page %}
             <li class="active"><a href="#">{{ loop.index }}</a></li>
             {% else %}
-            <li><a href="/weibo/follow_weibo?page={{ loop.index }}">{{ loop.index }}</a></li>
+            <li><a href="/weibo?page={{ loop.index }}">{{ loop.index }}</a></li>
             {% endif %}
         {% endfor %}
     </ul>
 </nav>
 
+   <script type=text/javascript>
+
+    $(function(){
+    $('.like').click(function(){
+         var wid= this.id
+        bt = this
+         $.ajax({
+             type: "POST",
+             url: "http://127.0.0.1:5000/weibo/like/"+wid,
+             data: {},
+             dataType: "json",
+             success: function(data){
+                        if (data.color == 0){
+                              $('#'+wid).find('.badge').text(data.like)
+                        $('#h'+wid).css('color','white')
+                        }
+                        else {
+                            $('#'+wid).find('.badge').text(data.like)
+                        $('#h'+wid).css('color','red')
+                        }
+
+                      },
+             flase:function () {
+                 alert('请求失败')
+             }
+         });
+    });
+});
+  </script>
 {% endblock %}
+
